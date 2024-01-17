@@ -7,3 +7,8 @@ markdown文档快捷提示
 - 支持选中文本快速添加标签
 - 支持更多示例模版
 
+## 使用方式
+- 打开markdown文件点击右上角快捷键
+- 查看更多下来列表展示更多提示
+- `Command + Shift + P` 快捷搜索`Markdown Enjoy: 对应key`
+- `Command + Shift + P` 快捷搜索`Markdown Enjoy: Example`查看更多语法文档

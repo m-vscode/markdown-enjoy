@@ -5,6 +5,11 @@
   "publisher": "MisterZhouZhou",
   "icon": "assets/markdown.png",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-vscode/markdown-enjoy",
+    "ref": "main"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -89,7 +94,7 @@
       },
       {
         "command": "markdownEnjoy.editor.codeblock",
-        "title": "%command.markdownEnjoy.editor.codeblock%",
+        "title": "codeblock",
         "category": "Markdown Enjoy",
         "icon": {
           "light": "assets/icons/codeblock-light.svg",
