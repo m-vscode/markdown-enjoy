@@ -1,0 +1,195 @@
+{
+  "name": "markdown-enjoy",
+  "displayName": "Markdown Enjoy",
+  "description": "enjoy editing your markdown",
+  "publisher": "MisterZhouZhou",
+  "icon": "assets/markdown.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Markdown Enjoy",
+    "Markdown"
+  ],
+  "author": {
+    "name": "MisterZhouZhou",
+    "url": "https://mzsa.eu.org/",
+    "email": "16619930394@163.com"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdownEnjoy.example",
+        "title": "Markdown Example",
+        "category": "Markdown Enjoy"
+      },
+      {
+        "command": "markdownEnjoy.editor.heading",
+        "title": "heading",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/heading-light.svg",
+          "dark": "assets/icons/heading-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.bold",
+        "title": "bold",
+        "category": "Markdown Enjoy"
+      },
+      {
+        "command": "markdownEnjoy.editor.italic",
+        "title": "italic",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/italic-light.svg",
+          "dark": "assets/icons/italic-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.strikethrough",
+        "title": "strikethrough",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/strikethrough-light.svg",
+          "dark": "assets/icons/strikethrough-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.hyperlink",
+        "title": "hyperlink",
+        "category": "Markdown Enjoy",
+        "icon": "$(link)"
+      },
+      {
+        "command": "markdownEnjoy.editor.img",
+        "title": "img",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "dark": "/assets/icons/img-dark.svg",
+          "light": "/assets/icons/img-light.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.code",
+        "title": "code",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/code-light.svg",
+          "dark": "assets/icons/code-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.codeblock",
+        "title": "%command.markdownEnjoy.editor.codeblock%",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/codeblock-light.svg",
+          "dark": "assets/icons/codeblock-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.orderedlist",
+        "title": "orderedlist",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/ordered-list-light.svg",
+          "dark": "assets/icons/ordered-list-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.unorderedlist",
+        "title": "unorderedlist",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/unordered-list-light.svg",
+          "dark": "assets/icons/unordered-list-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.blockquote",
+        "title": "blockquote",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/block-quote-light.svg",
+          "dark": "assets/icons/block-quote-dark.svg"
+        }
+      },
+      {
+        "command": "markdownEnjoy.editor.tasklist",
+        "title": "tasklist",
+        "category": "Markdown Enjoy"
+      },
+      {
+        "command": "markdownEnjoy.editor.options",
+        "title": "options",
+        "category": "Markdown Enjoy",
+        "icon": {
+          "light": "assets/icons/options-light.svg",
+          "dark": "assets/icons/options-dark.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "markdownEnjoy.editor.hyperlink",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        },
+        {
+          "command": "markdownEnjoy.editor.img",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        },
+        {
+          "command": "markdownEnjoy.editor.code",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        },
+        {
+          "command": "markdownEnjoy.editor.codeblock",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        },
+        {
+          "command": "markdownEnjoy.editor.blockquote",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        },
+        {
+          "command": "markdownEnjoy.editor.options",
+          "group": "navigation@-133",
+          "when": "resourceExtname == .md && markdownEnjoy:markdown:editorToolbar"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
