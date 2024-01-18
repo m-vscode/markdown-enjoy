@@ -12,3 +12,8 @@ markdown文档快捷提示
 - 查看更多下来列表展示更多提示
 - `Command + Shift + P` 快捷搜索`Markdown Enjoy: 对应key`
 - `Command + Shift + P` 快捷搜索`Markdown Enjoy: Example`查看更多语法文档
+
+## 效果
+![工具栏](/screenshoot/editortoolbar.png)
+![more](/screenshoot/editortoolbar-more.png)
+![example](/screenshoot/editortoolbar-example.png)
